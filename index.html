@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title> TP2 New features — Categories </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 class="p-5 text-5xl font-extrabold"> TP2 New features — Categories </h1>
+        <h2 class="p-5 text-2xl font-semibold mb-4"> Lucas Courbet - EPSI EISI I1 Dev 2</h3>
+
+        <!-- The todo list -->
+        <div class="container mx-auto px-4 py-8">
+            <h2 class="text-2xl font-semibold mb-4">Todo List</h2>
+            
+            <!-- The form to assign a category to each tasks -->
+            <form id="task-form">
+                <input type="text" id="task-input" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nouvelle tâche...">
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="Work">Work</option>
+                    <option value="Home">Home</option>
+                    <option value="Other">Other</option>
+                </select>
+            </form>
+
+            <br/>
+            <button type="submit" id="add-task-button" class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Ajouter tâche </button>
+            <button id="delete-all-task-button" class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Supprimer toutes les tâches </button>
+            <ul id="todo-list" class="mt-4 space-y-2 list-disc"/>
+        </div>
+        
+        <!-- Load javascript files -->
+        <script src="TaskRenderer.js"></script>
+        <script src="model.js"></script>
+        <script src="AdvancedTasks.js"></script>
+        <script src="view.js"></script>
+        <script src="controller.js"></script>
+
+        <!-- Doing this way (wrapping the init code in a DOMContentLoaded event), ensure that
+             the script will run only after the entire HTML document has been fully loaded. -->
+        <script src="init.js"></script>
+    </body>
+</html>
